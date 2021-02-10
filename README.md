@@ -14,3 +14,6 @@ import Link from 'next/link'
 + 如果浏览器中JavaScript被禁用，则使用链接调整
 + Link组件只能添加href属性，其他属性应该添加到a标签上
 + Link组件在生产环境会通过预取功能自动优化应用程序以获取最佳性能
+### 静态资源
++ 静态资源放于public文件夹
++ 组件通过'/image/*.jpg'可以直接访问
