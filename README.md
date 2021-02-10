@@ -1,30 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+### 创建页面
++ 页面需要放置在pages文件夹下，每个文件就是一个页面
++ 页面组件需要被默认导出
++ 页面组件中不需要引入React
++ 页面地址与文件地址是对应关系
+### 页面跳转
++ 使用Link组件跳转
+```js
+import Link from 'next/link'
+<Link href="/list">
+  <a title="go list">go list</a>
+</Link>
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on ZEIT Now
-
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
++ 如果浏览器中JavaScript被禁用，则使用链接调整
++ Link组件只能添加href属性，其他属性应该添加到a标签上
++ Link组件在生产环境会通过预取功能自动优化应用程序以获取最佳性能
