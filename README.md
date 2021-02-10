@@ -17,3 +17,13 @@ import Link from 'next/link'
 ### 静态资源
 + 静态资源放于public文件夹
 + 组件通过'/image/*.jpg'可以直接访问
+### 修改页面元数据
++ 通过Head组件修改元数据
+```js
+import Head from 'next/head'
+<>
+  <Head>
+    <title>List page</title>
+  </Head>
+</>
+```
