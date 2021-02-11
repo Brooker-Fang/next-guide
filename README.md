@@ -52,3 +52,6 @@ import Head from 'next/head'
 ### 两种预渲染形式：静态生成和服务器端生成
 + 静态生成：是在构建时已经生成HTML页面。后面的每个请求都共用构建时生成好的HTML
 + 服务器端渲染：服务器端渲染是在请求时生成HTML，每个请求都会重新生成HTML
+### 静态生成
++ 需要提前的数据，要在getStaticProps方法里面获取
++ getStaticProps只在构建的时候执行
