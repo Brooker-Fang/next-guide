@@ -6,6 +6,7 @@ export default function Home() {
       <Link href="list">
         <span>go list</span>
       </Link>
+      <div className="global-wrap"></div>
     </div>
   )
 }

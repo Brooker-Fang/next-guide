@@ -27,3 +27,28 @@ import Head from 'next/head'
   </Head>
 </>
 ```
+### 使用css
++ next内置了style-jsx
+```js
+<style jsx>{`
+  .class{
+    color: blue
+  }
+`}</style>
+```
+### 添加全局样式
++ 在pages文件夹中新建_app.js文件，并加入以下代码
+  ```js
+  export default function App({ Component, pageProps}){
+    return <Component {...pageProps}/>
+  }
+  ```
++ 在项目根目录下创建styles文件夹，并添加global.css文件
++ 在_app.js中引入global.css
+### 预渲染
++ 指数据和html的拼接在服务器端提前完成
++ 预渲染可以使SEO更加友好
++ 可以带来更好的用户体验
+### 两种预渲染形式：静态生成和服务器端生成
++ 静态生成：是在构建时已经生成HTML页面。后面的每个请求都共用构建时生成好的HTML
++ 服务器端渲染：服务器端渲染是在请求时生成HTML，每个请求都会重新生成HTML
