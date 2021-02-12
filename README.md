@@ -53,5 +53,17 @@ import Head from 'next/head'
 + 静态生成：是在构建时已经生成HTML页面。后面的每个请求都共用构建时生成好的HTML
 + 服务器端渲染：服务器端渲染是在请求时生成HTML，每个请求都会重新生成HTML
 ### 静态生成
-+ 需要提前的数据，要在getStaticProps方法里面获取
++ 静态生成页面需要提前的数据，要在getStaticProps方法里面获取，要在组件所在的js文件导出getStaticProps方法
 + getStaticProps只在构建的时候执行
+### 服务端渲染
++ 需要再组件中导出getServerSideProps方法
+```js
+export async function getServerSideProps(context){
+  // context中会包含 请求参数
+  return {
+    props: {
+
+    }
+  }
+}
+```
