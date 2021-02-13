@@ -24,7 +24,15 @@ export class List extends Component {
 
 export default List
 // 静态生成的 页面，需要提前获取的数据在getStaticProps方法里
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//   let data = await read(join(process.cwd(), 'pages', '_app.js'), 'utf-8')
+//   return {
+//     props: {
+//       data
+//     }
+//   }
+// }
+export async function getServerSideProps() {
   let data = await read(join(process.cwd(), 'pages', '_app.js'), 'utf-8')
   return {
     props: {
