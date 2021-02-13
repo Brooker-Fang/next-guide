@@ -67,3 +67,17 @@ export async function getServerSideProps(context){
   }
 }
 ```
+### 基于动态路由的静态生成
++ 创建基于动态路由的页面组件文件，命名时在文件名称外加上[],如 [id]
++ 导出异步函数getStaticPaths，用于获取所有用户可以访问的路由参数
+```js
+export async function getStaticPaths(){
+  // do 获取所有用户可以访问的路由参数
+  return {
+    // 返回固定格式的路由参数
+    paths: [{params: {id: 1}}, {params: {id: 2}},]
+    // 当用户访问的路由参数没有在当前函数中返回时，是否显示404页面
+    fallback: false
+  }
+}
+```

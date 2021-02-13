@@ -32,7 +32,8 @@ export default List
 //     }
 //   }
 // }
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  console.log(context.query)
   let data = await read(join(process.cwd(), 'pages', '_app.js'), 'utf-8')
   return {
     props: {
