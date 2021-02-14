@@ -81,3 +81,5 @@ export async function getStaticPaths(){
   }
 }
 ```
+### 自定义404页面
++ 在pages文件夹下创建404.js
