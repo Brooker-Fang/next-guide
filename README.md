@@ -83,3 +83,12 @@ export async function getStaticPaths(){
 ```
 ### 自定义404页面
 + 在pages文件夹下创建404.js
+  
+### 实现api Routes接口
++ 在pages/api文件夹中创建API Routes，如user.js
++ 在文件中默认的导出请求处理函数，函数有两个参数，req为请求对象，res为响应对象
++ 通过 3000/api/user访问
++ 不要在getStaticPaths或getStaticProps函数中访问API Routes，因为这两个函数就是在服务器端运行的，可以直接写服务器端代码
+```js
+export 
+```
