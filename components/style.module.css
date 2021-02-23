@@ -1,0 +1,15 @@
+.item-wrap{
+  padding-top: 20px;
+}
+.item-img{
+  font-size: 28px;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.title{
+  text-align: center;
+  margin-top: 10px;
+}

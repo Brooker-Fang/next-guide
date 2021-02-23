@@ -45,3 +45,9 @@
   color: #9aa0a6;
   margin-top: 3px;
 }
+.list-wrap{
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
